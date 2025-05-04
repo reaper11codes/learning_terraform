@@ -14,11 +14,6 @@ data "aws_ami" "app_ami" {
   owners = ["979382823631"] # Bitnami
 }
 
-module "security-group" {
-  source  = "terraform-aws-modules/security-group/aws"
-  version = "5.3.0"
-}
-
 data "aws_vpc" "default" {
   default = true
 }
