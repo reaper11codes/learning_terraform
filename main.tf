@@ -58,12 +58,8 @@ module "alb" {
     ex-http = {
       port     = 80
       protocol = "HTTP"
-      default_action = {
-        type = "forward"
-        forward = {
-          target_group_index = 0
-        }
-      }
+      target_group_index = 0
+      type     = "forward"
     }
   }
 
